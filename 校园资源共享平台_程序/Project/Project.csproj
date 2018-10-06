@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5FE53B15-CF26-4C21-8EAF-5D4097661A60}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Project</RootNamespace>
+    <AssemblyName>Project</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ckeditor\adapters\jquery.js" />
+    <Content Include="ckeditor\build-config.js" />
+    <Content Include="ckeditor\ckeditor.js" />
+    <Content Include="ckeditor\config.js" />
+    <Content Include="ckeditor\contents.css" />
+    <Content Include="ckeditor\lang\zh-cn.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\zh-cn.js" />
+    <Content Include="ckeditor\plugins\a11yhelp\dialogs\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="ckeditor\plugins\about\dialogs\hidpi\logo_ckeditor.png" />
+    <Content Include="ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="ckeditor\plugins\icons.png" />
+    <Content Include="ckeditor\plugins\icons_hidpi.png" />
+    <Content Include="ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="ckeditor\plugins\image\images\noimage.png" />
+    <Content Include="ckeditor\plugins\justify\icons\hidpi\justifyblock.png" />
+    <Content Include="ckeditor\plugins\justify\icons\hidpi\justifycenter.png" />
+    <Content Include="ckeditor\plugins\justify\icons\hidpi\justifyleft.png" />
+    <Content Include="ckeditor\plugins\justify\icons\hidpi\justifyright.png" />
+    <Content Include="ckeditor\plugins\justify\icons\justifyblock.png" />
+    <Content Include="ckeditor\plugins\justify\icons\justifycenter.png" />
+    <Content Include="ckeditor\plugins\justify\icons\justifyleft.png" />
+    <Content Include="ckeditor\plugins\justify\icons\justifyright.png" />
+    <Content Include="ckeditor\plugins\justify\lang\zh-cn.js" />
+    <Content Include="ckeditor\plugins\justify\plugin.js" />
+    <Content Include="ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="ckeditor\plugins\link\images\anchor.png" />
+    <Content Include="ckeditor\plugins\link\images\hidpi\anchor.png" />
+    <Content Include="ckeditor\plugins\magicline\images\hidpi\icon-rtl.png" />
+    <Content Include="ckeditor\plugins\magicline\images\hidpi\icon.png" />
+    <Content Include="ckeditor\plugins\magicline\images\icon-rtl.png" />
+    <Content Include="ckeditor\plugins\magicline\images\icon.png" />
+    <Content Include="ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\zh-cn.js" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\lang\_translationstatus.txt" />
+    <Content Include="ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="ckeditor\plugins\wsc\dialogs\wsc_ie.js" />
+    <Content Include="ckeditor\skins\moono\dialog.css" />
+    <Content Include="ckeditor\skins\moono\dialog_ie.css" />
+    <Content Include="ckeditor\skins\moono\dialog_ie7.css" />
+    <Content Include="ckeditor\skins\moono\dialog_ie8.css" />
+    <Content Include="ckeditor\skins\moono\dialog_iequirks.css" />
+    <Content Include="ckeditor\skins\moono\editor.css" />
+    <Content Include="ckeditor\skins\moono\editor_gecko.css" />
+    <Content Include="ckeditor\skins\moono\editor_ie.css" />
+    <Content Include="ckeditor\skins\moono\editor_ie7.css" />
+    <Content Include="ckeditor\skins\moono\editor_ie8.css" />
+    <Content Include="ckeditor\skins\moono\editor_iequirks.css" />
+    <Content Include="ckeditor\skins\moono\icons.png" />
+    <Content Include="ckeditor\skins\moono\icons_hidpi.png" />
+    <Content Include="ckeditor\skins\moono\images\arrow.png" />
+    <Content Include="ckeditor\skins\moono\images\close.png" />
+    <Content Include="ckeditor\skins\moono\images\hidpi\close.png" />
+    <Content Include="ckeditor\skins\moono\images\hidpi\lock-open.png" />
+    <Content Include="ckeditor\skins\moono\images\hidpi\lock.png" />
+    <Content Include="ckeditor\skins\moono\images\hidpi\refresh.png" />
+    <Content Include="ckeditor\skins\moono\images\lock-open.png" />
+    <Content Include="ckeditor\skins\moono\images\lock.png" />
+    <Content Include="ckeditor\skins\moono\images\refresh.png" />
+    <Content Include="ckeditor\styles.js" />
+    <Content Include="ckeditor\Upload.ashx" />
+    <Content Include="Controls\Foot.ascx" />
+    <Content Include="Controls\Head.ascx" />
+    <Content Include="Controls\Left.ascx" />
+    <Content Include="ManagerReg.aspx" />
+    <Content Include="script\bootstrap-select.min.js" />
+    <Content Include="script\bootstrap.min.js" />
+    <Content Include="script\co.Core.js" />
+    <Content Include="script\date\calendar.js" />
+    <Content Include="script\date\lang\en.js" />
+    <Content Include="script\date\lang\zh-cn.js" />
+    <Content Include="script\date\lang\zh-tw.js" />
+    <Content Include="script\date\skin\datePicker.gif" />
+    <Content Include="script\date\skin\default\datepicker.css" />
+    <Content Include="script\date\skin\default\img.gif" />
+    <Content Include="script\date\skin\WdatePicker.css" />
+    <Content Include="script\date\skin\whyGreen\bg.jpg" />
+    <Content Include="script\date\skin\whyGreen\datepicker.css" />
+    <Content Include="script\date\skin\whyGreen\img.gif" />
+    <Content Include="script\date\WdatePicker.js" />
+    <Content Include="script\echarts-all.js" />
+    <Content Include="script\jquery-1.10.2.min.js" />
+    <Content Include="script\jquery.validate.min.js" />
+    <Content Include="script\system.js" />
+    <Content Include="style\bootstrap-select.min.css" />
+    <Content Include="style\bootstrap.css" />
+    <Content Include="style\font-awesome.min.css" />
+    <Content Include="style\style.css" />
+    <Content Include="SysManage\BakDB.aspx" />
+    <Content Include="SysManage\FenLeiManage.aspx" />
+    <Content Include="SysManage\FenLeiOper.aspx" />
+    <Content Include="SysManage\ManagerManage.aspx" />
+    <Content Include="SysManage\ManagerOper.aspx" />
+    <Content Include="SysManage\NewsManage.aspx" />
+    <Content Include="SysManage\NewsOper.aspx" />
+    <Content Include="SysManage\EditPwd.aspx" />
+    <Content Include="SysManage\Login.aspx" />
+    <Content Include="SysManage\Logout.aspx" />
+    <Content Include="SysManage\MainFrame.aspx" />
+    <Content Include="SysManage\right.html" />
+    <Content Include="SysManage\ProductManage.aspx" />
+    <Content Include="SysManage\ProductOper.aspx" />
+    <Content Include="SysManage\EditInfo.aspx" />
+    <Content Include="SysManage\PingJiaManage.aspx" />
+    <Content Include="SysManage\TongJi.aspx" />
+    <Content Include="SysManage\GuanZhuList.aspx" />
+    <Content Include="SysManage\Vcode.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="ProductList.aspx" />
+    <Content Include="ProductShow.aspx" />
+    <Content Include="NewsList.aspx" />
+    <Content Include="NewsShow.aspx" />
+    <Content Include="WebForm1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppCode\Common.cs" />
+    <Compile Include="AppCode\DB.cs" />
+    <Compile Include="AppCode\JavaScriptHelper.cs" />
+    <Compile Include="AppCode\ManagerBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppCode\MemberBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AppCode\PagingHelper.cs" />
+    <Compile Include="AppCode\PagerDAL.cs" />
+    <Compile Include="Controls\Left.ascx.cs">
+      <DependentUpon>Left.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Left.ascx.designer.cs">
+      <DependentUpon>Left.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerReg.aspx.cs">
+      <DependentUpon>ManagerReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ManagerReg.aspx.designer.cs">
+      <DependentUpon>ManagerReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SysManage\BakDB.aspx.cs">
+      <DependentUpon>BakDB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysManage\BakDB.aspx.designer.cs">
+      <DependentUpon>BakDB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SysManage\FenLeiManage.aspx.cs">
+      <DependentUpon>FenLeiManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysManage\FenLeiManage.aspx.designer.cs">
+      <DependentUpon>FenLeiManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SysManage\FenLeiOper.aspx.cs">
+      <DependentUpon>FenLeiOper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysManage\FenLeiOper.aspx.designer.cs">
+      <DependentUpon>FenLeiOper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SysManage\ManagerManage.aspx.cs">
+      <DependentUpon>ManagerManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysManage\ManagerManage.aspx.designer.cs">
+      <DependentUpon>ManagerManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SysManage\ManagerOper.aspx.cs">
+      <DependentUpon>ManagerOper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysManage\ManagerOper.aspx.designer.cs">
+      <DependentUpon>ManagerOper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SysManage\NewsManage.aspx.cs">
+      <DependentUpon>NewsManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysManage\NewsManage.aspx.designer.cs">
+      <DependentUpon>NewsManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SysManage\NewsOper.aspx.cs">
+      <DependentUpon>NewsOper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysManage\NewsOper.aspx.designer.cs">
+      <DependentUpon>NewsOper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SysManage\EditPwd.aspx.cs">
+      <DependentUpon>EditPwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysManage\EditPwd.aspx.designer.cs">
+      <DependentUpon>EditPwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SysManage\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysManage\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SysManage\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysManage\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SysManage\MainFrame.aspx.cs">
+      <DependentUpon>MainFrame.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysManage\MainFrame.aspx.designer.cs">
+      <DependentUpon>MainFrame.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProductList.aspx.cs">
+      <DependentUpon>ProductList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductList.aspx.designer.cs">
+      <DependentUpon>ProductList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductShow.aspx.cs">
+      <DependentUpon>ProductShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductShow.aspx.designer.cs">
+      <DependentUpon>ProductShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewsList.aspx.cs">
+      <DependentUpon>NewsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsList.aspx.designer.cs">
+      <DependentUpon>NewsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewsShow.aspx.cs">
+      <DependentUpon>NewsShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsShow.aspx.designer.cs">
+      <DependentUpon>NewsShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SysManage\ProductManage.aspx.cs">
+      <DependentUpon>ProductManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysManage\ProductManage.aspx.designer.cs">
+      <DependentUpon>ProductManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SysManage\ProductOper.aspx.cs">
+      <DependentUpon>ProductOper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysManage\ProductOper.aspx.designer.cs">
+      <DependentUpon>ProductOper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SysManage\EditInfo.aspx.cs">
+      <DependentUpon>EditInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysManage\EditInfo.aspx.designer.cs">
+      <DependentUpon>EditInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SysManage\PingJiaManage.aspx.cs">
+      <DependentUpon>PingJiaManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysManage\PingJiaManage.aspx.designer.cs">
+      <DependentUpon>PingJiaManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SysManage\TongJi.aspx.cs">
+      <DependentUpon>TongJi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysManage\TongJi.aspx.designer.cs">
+      <DependentUpon>TongJi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SysManage\GuanZhuList.aspx.cs">
+      <DependentUpon>GuanZhuList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysManage\GuanZhuList.aspx.designer.cs">
+      <DependentUpon>GuanZhuList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SysManage\Vcode.aspx.cs">
+      <DependentUpon>Vcode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysManage\Vcode.aspx.designer.cs">
+      <DependentUpon>Vcode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ajax\UpdateZan.ashx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4515</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
