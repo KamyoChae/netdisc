@@ -39,7 +39,7 @@
           </div>
             <div class="collapse">
                 <div class="index-nav-list-button">
-                    <a class="button-border-grean" href="../WebForm1.aspx">平台首页</a>
+                    <a class="button-border-grean" href="./WebForm1.aspx">平台首页</a>
                     <div href="#" class="button-border-grean dropdown-div" >学习资源 
                         <ul class="dropdown-menu ">
                                 <%
@@ -52,8 +52,8 @@
                          </ul>
                     </div>
                         
-                   <a class="button-border-grean" href="/NewsList.aspx?typeid=1">通知公告</a>
-                   <a class="button-border-grean" href="/NewsList.aspx?typeid=2">校园资讯</a>
+                   <a class="button-border-grean" href="./NewsList.aspx?typeid=1">通知公告</a>
+                   <a class="button-border-grean" href="./NewsList.aspx?typeid=2">校园资讯</a>
                     <%--<li><a class="navbar-brand" href="/Comment.aspx">在线交流</a></li>--%>
                    <a class="button-border-grean" href="http://www.gxnu.edu.cn/" target="_blank">本校网站</a>
                 </div>
@@ -96,11 +96,12 @@
 
     <script type="text/javascript">
         function searchInfo() {
+            
             var fl = $("#ddlFenLei").val();
             var key = $("#txtKey").val().trim();
 //            if (key == "")
 //                $("#txtKey").focus();
 //            else
-                location.href = '/ProductList.aspx?fenleiId=' + fl + '&key=' + decodeURIComponent(key);
+                location.href = 'ProductList.aspx?fenleiId=' + fl + '&key=' + decodeURIComponent(key);
         }
     </script>

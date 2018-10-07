@@ -38,7 +38,7 @@
     <div class="main_left">
         <div class="main_left_overflow">
             <div class="main_nav">
-                <i class="icon-home"></i><span class=""><a href="/WebForm1.aspx">返回主页</a></span>
+                <i class="icon-home"></i><span class=""><a href="../WebForm1.aspx">返回主页</a></span>
             </div>
             <%if (mbGrade == 1)
               { %>

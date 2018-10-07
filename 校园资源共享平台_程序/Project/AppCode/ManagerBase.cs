@@ -26,7 +26,7 @@ namespace Project
             }
             else
             {
-                HttpContext.Current.Response.Write("<script type='text/javascript'>alert('请先登录。');this.top.location.href= '/SysManage/Login.aspx?grade=1';</script>");
+                HttpContext.Current.Response.Write("<script type='text/javascript'>alert('请先登录。');window.location.href('/SysManage/Login.aspx');</script>");
                 HttpContext.Current.Response.End();
             }
         }

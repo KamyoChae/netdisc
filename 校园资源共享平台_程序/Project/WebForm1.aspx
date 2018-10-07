@@ -10,6 +10,7 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="style/greenStyle.css" />
     <link rel="stylesheet" type="text/css" href="style/font-awesome.min.css" />
+    <script type="text/javascript" src="script/jquery-1.10.2.min.js"></script>
 </head>
 <body>
 <form id="Form1" runat="server">

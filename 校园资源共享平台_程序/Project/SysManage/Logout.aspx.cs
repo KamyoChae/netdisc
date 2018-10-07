@@ -19,10 +19,10 @@ namespace Project.SysManage
                 cookie.Values.Clear();
                 System.Web.HttpContext.Current.Response.Cookies.Set(cookie);
                 //Response.Redirect("login.aspx?grade=" + mbGrade);
-                //Response.Redirect("/WebForm1.aspx");
-                string strMsg = "确定要退出？";
-                string strRedirectUrl = "/WebForm1.aspx";
-                JavaScriptHelper.AlertAndRedirect(strMsg,strRedirectUrl);
+                Response.Redirect("../WebForm1.aspx");
+                //string strMsg = "确定要退出？";
+                //string strRedirectUrl = "../WebForm1.aspx";
+                //JavaScriptHelper.AlertAndRedirect(strMsg,strRedirectUrl);
             }
         }
     }
