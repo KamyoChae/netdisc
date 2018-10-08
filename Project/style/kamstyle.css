@@ -1,0 +1,248 @@
+:root{
+    font-size: 16pt;
+}
+.login_body{
+    background: #fff;
+}
+#login_body{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.login_right{
+    /*管理员按钮*/
+    width: 350px;
+}
+
+.login_content{   
+    display: flex;
+    align-items: center; 
+    padding: 3em;
+    margin-left: 100px;
+}
+ 
+.required, #btnLogin{
+    box-sizing: border-box;
+    width: 400px;
+    height: 45px;
+    margin: 1.2em 0;
+    padding: .5em .8em;
+    border: 1px solid rgba(66, 66, 66, 0.5);
+    outline: none;
+    border-radius: 6px;
+}
+.checkcode{
+    width: 290px;
+    margin-right: 10px;
+}
+#img_code{
+    width: 100px;
+    height: 45px;
+}
+#btnLogin{
+    border: none;
+    width: 220px;
+    transition: .4s all;
+}
+#btnLogin:hover{
+    color: #fff;
+    background: linear-gradient( 100deg, #508cfc , #37bafc ) ;
+}
+
+.cover{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: #dcd9d4;
+    transform: skew(-50deg) translateX(30%);
+}
+.logo{
+    display: flex;
+    justify-content: start;
+    align-items: center; 
+    height: 100px; 
+    color: #424242; 
+    font-size: 2em;
+    margin: 1em 0 0 1.5em; 
+    overflow: hidden;
+}
+.logo img{
+    width:150px;
+    height: 150px;
+}
+.animate{
+    position: absolute;
+    top: 10%;
+    z-index: 999;
+    right: 15%;
+    width: 600px;
+    height: 600px; 
+}
+.textbox{
+    position: absolute;
+    top: 10%;
+    left: 10%;  
+    color: #424242; 
+    text-indent: 1em;
+    overflow: hidden; 
+}
+.textbox span{
+    display: block;
+    margin:  0 0 .5em 0;
+}
+.textbox span:nth-child(1){
+    font-size: 90px;
+    width: 90px;
+    height: 100px;
+    transform-origin: 50% 90%;
+    animation: Jitter infinite 1s linear alternate-reverse;
+}
+.textbox span:nth-child(2){
+    font-size: 20pt;
+    text-indent: 1em;   
+    padding: 0 1em;
+}
+@keyframes Jitter{
+    0%{
+        transform: rotateZ(-20deg);
+    }
+    100%{
+        transform: rotateZ(20deg);
+        opacity: .4;
+    }
+
+}
+.textbox span i{
+    display: inline-block;
+}
+
+@keyframes op{
+    0%{
+        transform: translateX(.5em)
+    }
+    100%{
+        transform: translateX(0)
+    }
+}
+.textbox span i:nth-child(1){
+    animation: op 1s infinite alternate-reverse 0s; 
+}
+.textbox span i:nth-child(2){
+    animation: op 1s infinite alternate-reverse .5s; 
+}
+.textbox span i:nth-child(3){
+    animation: op 1s infinite alternate-reverse 1s; 
+}
+
+.eyebox{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 60%; 
+}
+.eyebox .eyes{
+    position: relative;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+    
+    box-shadow: 0 0 20px #888888 ;
+}
+
+.ebox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 6px;
+    z-index: 99;
+}
+.eyebox .red{
+    background: #e51a46;
+}
+.eyebox .blue{
+    background: #508cfc;
+}
+.ewhite{
+    position: relative;
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: inset 0 0 10px #424242;
+}
+.eblack{
+    position: absolute;
+    transform: translate(5%,25%);
+    width: 50%;
+    height: 50%;
+    background: #424242;
+    border-radius: 50%;
+    animation: cirle infinite 4s alternate-reverse ;
+}
+@keyframes cirle{
+    0%{
+        transform: translate(10%,25%);
+    }
+    25%{
+        transform: translate(25%,10%);
+    }
+    50%{
+        transform: translate(25%,25%);
+    }
+    75%{
+        transform: translate(25%,40%);
+    }
+    100%{
+        transform: translate(10%,25%);
+    }
+}
+.eblack::before{
+    content: "";
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 40%;
+    height: 40%;
+    background: #fff;
+    border-radius: 50%;
+}
+.eyebox .eyes:nth-child(1) {
+    animation: scale 1.2s infinite alternate-reverse ;
+}
+.eyebox .eyes:nth-child(2) {
+    animation: scale 1s infinite alternate-reverse ;
+}
+.eyebox .eyet:nth-child(1) {
+    animation: drop 1.2s infinite alternate-reverse ;
+}
+.eyebox .eyet:nth-child(2) {
+    animation: drop 1s infinite alternate-reverse ;
+}
+@keyframes drop {
+    0%{
+        transform: translateY(0%) ; 
+    }
+    100%{
+        transform: translateY(50%) ; 
+    }
+}
+@keyframes scale{
+    0%{ 
+        transform: scale(1);
+    }
+    100%{ 
+        transform: scale(1.5);
+    }
+}
