@@ -2,6 +2,7 @@
     margin: 0%;
     padding: 0;
     list-style: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 :root{
     font-size: 16pt;
@@ -435,13 +436,16 @@ a{
 .navbar-brand{
     position: relative;
     display: inline-block;
-    width: 3.5em; 
+    width: 5em; 
     font-size: 1em;
     font-weight: 200;
     color: #424242; 
     text-align: center; 
     margin:  0 .6em;
     padding: 20px 0; 
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .navbar-brand::before{
     content: "";
@@ -963,4 +967,221 @@ div.pagination{
     margin-left: .5em;
     font-size: .8em;
     color: #424242;
+}
+
+
+/* product show */
+
+.pshow_container{
+    box-sizing: border-box;
+    width: 60%;
+    margin: auto;  
+    margin-bottom: 8em;
+    
+}
+.titlebox{  
+    position: relative; 
+    overflow: hidden;
+    text-align: center;  
+    box-shadow: 0 0 30px #ccc;
+    border-radius: 10px; 
+}
+.pshow_title{ 
+    font-size: 1.5rem;
+    height: 3.6em;
+    line-height: 3.6em;
+    text-align: center; 
+    border-bottom: 2px dashed #bbb;
+    margin: 1em 2em 2em 2em ; 
+}
+ 
+.pshow_type{
+    display: flex;
+    justify-content: space-around;
+    color: #555;
+    padding: 0 4em;
+    margin: 1em 0;
+}
+.btn_download{ 
+    position: relative;
+    text-align: center;
+    padding-top: 2em ;
+}
+.down{ 
+    position: relative;
+
+    width: 8em;
+    height: 8em;
+    margin: auto;
+    transform: translateY(50%); 
+}
+.dow{
+    text-align: center;
+    width: 8em;
+    height: 8em;
+    line-height: 5em;
+    color: #fff;
+    border-radius: 50%;
+    background: #0d5ea6; 
+    transition: all .3s;
+}
+.dow:hover{
+    background: #0ca067;
+}
+.down span{
+    position: absolute;
+    top: 0;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    background: #e51a46;
+    z-index: -5;
+}
+.down span:nth-child(1){
+    left: 0;
+}
+.down span:nth-child(2){
+    right: 0;
+}
+.down span::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    background: #fff; 
+    margin: auto;
+}
+.down span::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 35%;
+    height: 35%;
+    border-radius: 50%;
+    background: #424242; 
+    margin: auto;
+    animation: dow 1s infinite alternate-reverse;
+}
+
+@keyframes dow{
+    0%{
+        transform: rotateX(0deg)
+    }
+    40%{
+        transform: rotateX(80deg)
+    }
+    0%{
+        transform: rotateX(0deg)
+    }
+}
+
+.aboutbox{
+    padding: 2em 0; 
+    border-bottom: #bbb dotted 2px;
+}
+.aboutbox h1{
+    
+    color: #424242;
+    margin: 1em 0 .5em 0;
+}
+.aboutbox>div{
+    color: #888;
+    font-size: .8em;
+}
+
+.pshow_list{
+    box-sizing: border-box;
+    width: 100%; 
+    color: #1f3957;
+    padding: 0 1em; 
+}
+.pshow_useritem{
+    margin-top: 3em;
+}
+.pshow_user{
+    box-sizing: border-box;
+    padding: .2em 1em;
+    box-shadow: 0 0 10px #bbb;
+    border-radius: 10px;
+}
+.pshow_user{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.pshow_time{
+    font-size: .9rem;
+}
+.pshow_star{ 
+    margin: 0 .5em;
+    color: #e51a46; 
+}
+.pshow_contentbox{ 
+    box-sizing: border-box;
+    padding: 1.8em 1em;
+    margin: 0 .5em;
+    box-shadow: 0 2px 5px #bbb;
+    border-top-left-radius: none;
+    border-top-right-radius: none;
+}
+.pshow_content{
+    word-break: break-all;
+    font-size: .9em;
+}
+.pshow_time{
+    color: #888;
+    font-size: .7em; 
+}
+.form-horizontal{
+    
+    border-top: #bbb dotted 2px;
+    margin-top: 3em;
+    padding: 2.5em 0;
+
+}
+ .form-group p, .form-horizontal .form-group h2{
+    width: 10em;
+    text-align: left;
+    color: #424242;
+}
+.form-group p{
+    font-size: .8rem;
+    color: #888;
+}
+.write_text{
+    width: 100%;
+    height: 20em;
+    font-size: .8rem;
+    line-height: 1.5em;
+    padding: 1em .8em;
+}
+
+.pay_star{
+    width: 10em;
+    margin: .5em 0;
+    padding: 0 2em;
+    font-size: 1rem;
+    text-align: center;
+}
+.sub_box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.forsubmit{ 
+    border: none;
+    color: #fff;
+    background: #0d5ea6;
+    transition: .3s all;
+}
+.forsubmit:hover{
+    background:  #37bafc ;
 }

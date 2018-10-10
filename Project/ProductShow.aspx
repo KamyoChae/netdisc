@@ -26,108 +26,122 @@
                     <form id="Form1" runat="server">
                         <uc1:Head ID="Head1" runat="server" />
 
-                        <div class="main_body padding_lr_0"  >
-                            
-
+                        <div class="pshow_box"  >
+                             
                             <div class=" ">
-                                <div class="nav-tit"> 资源详情</div>
-                                <div class="col-md-12">
+                                <div class="nav-tit" id="tit">资源详情</a> </div>
+                                <div class="pshow_container">
 
-                                    <div class="col-md-12">
-                                        <div class="col-md-12 text-center">
-                                            <b><asp:Literal ID="productname" runat="server"></asp:Literal></b>
+                                    <div class="titlebox">
+                                        <div class="pshow_title">
+                                             <asp:Literal ID="productname" runat="server"></asp:Literal> 
                                         </div>
-                                        <div class="col-md-12 text-center"  >
-                                            <asp:Literal ID="FenLeiName" runat="server"></asp:Literal>/类型：
-                                            <asp:Literal ID="FileType" runat="server"></asp:Literal>/大小：
-                                            <asp:Literal ID="reName" runat="server"></asp:Literal>/下载量：
-                                            <asp:Literal ID="hits" runat="server"></asp:Literal> 
-                                            <span class="zan" id="<%=id %>"  >
-                                                <i class="icon-thumbs-up-alt"></i>(<span><asp:Literal ID="zanNum" runat="server"></asp:Literal></span>)
-                                            </span>
-                                        </div>
-                                    </div>
+                                    
 
-                                    <div class=" ">
-                                        <div class=" ">
-                                            <p align="center">
-                                                <asp:LinkButton ID="btnGuanZhu" runat="server" CssClass="btn btn-default" OnClick="btnGuanZhu_Click">
-                                                   
-                                                    <div class="down">download</div>
+                                        <div class="typebox">
+
+                                            <div class=" pshow_type"  >
+
+                                                <span class="type_items">归类：<asp:Literal ID="FenLeiName" runat="server"></asp:Literal></span>
+                                                <span class="type_items">类型：<asp:Literal ID="FileType" runat="server"></asp:Literal></span>
+                                                <span class="type_items">大小：<asp:Literal ID="reName" runat="server"></asp:Literal></span>
+                                                <span class="type_items">下载量：<asp:Literal ID="hits" runat="server"></asp:Literal></span> 
+                                                
+                                                <span class="zan" id="<%=id %>"  >
+                                                    <i class="icon-thumbs-up-alt"></i>(<span><asp:Literal ID="zanNum" runat="server"></asp:Literal></span>)
+                                                </span> 
+                                            </div>
+                                            <div class="btn_download">
+                                                
+                                                <asp:LinkButton ID="btnGuanZhu" runat="server" CssClass="btn btn-default" OnClick="btnGuanZhu_Click"> 
+                                                    <div class="down">
+                                                            <span class="eysleft"></span><span class="eysright"></span>
+                                                            <div class="dow">
+                                                                    download
+                                                            </div>
+                                                        </div>
                                                 </asp:LinkButton>
-                                                点击下载(迅雷/电驴)，(如不能成功下载，请按右键>“目标另存为”)
-                                            </p>
 
-                                            <p>  资源介绍 </p>
-                                            <div>
-                                                <asp:Literal ID="content" runat="server"></asp:Literal>
                                             </div>
                                         </div>
                                     </div>
+                                         
+                                    <div class="aboutbox">
+                                        <div class="pshow_about">  
+                                                <h1>  资源介绍 </h1>
+                                                <div>
+                                                    <asp:Literal ID="content" runat="server"></asp:Literal>
+                                                </div> 
+                                            </div>
+                                    </div>
+                                    
 
 
-                                    <div class=" ">
-                                        <table class="table table_span table-hover">
-                                            <tbody>
-                                                <asp:Repeater ID="rptList" runat="server">
-                                                    <ItemTemplate>
-                                                        <tr>
-                                                            <td>
-                                                                <div class="col-sm-12">
-                                                                    <div class="col-sm-6">
-                                                                        <%#Eval("PingJiaUser") %> / <span class="orange"><%#Eval("Xing") %></span></div>
-                                                                    <div class="col-sm-6 text-right">
-                                                                        <%#Eval("PingJiaTime")%>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-sm-12">
-                                                                    <%#Eval("PingJiaContent")%>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                    </ItemTemplate>
-                                                </asp:Repeater>
-                                            </tbody>
-                                        </table>
+                                    <div class=" "> 
 
-                                        <div class="form-horizontal col-md-12">
-                                            <div class="form-group" style="border-bottom:#ccc solid 1px;">
-                                                <label class="col-sm-1 control-label padding_lr_0">我要评论</label>
-                                                <div class="col-sm-10"></div>
+                                        <div class="pshow_list">
+                                            <asp:Repeater ID="rptList" runat="server">
+                                                <ItemTemplate> 
+                                                    <div class="pshow_useritem">
+
+                                                        <div class="pshow_user">
+                                                            <span class="pshow_name">
+                                                                <%#Eval("PingJiaUser") %>  
+                                                            </span> 
+                                                            <span class="pshow_star">
+                                                                <%#Eval("Xing") %>
+                                                            </span>
+                                                           
+                                                        </div>
+                                                        
+                                                    </div>
+                                                    <div class="pshow_contentbox">
+                                                        <div class="pshow_content"> 
+                                                            <%#Eval("PingJiaContent")%>
+                                                        </div>
+
+                                                        <span class="pshow_time">
+                                                            <%#Eval("PingJiaTime")%>
+                                                        </span>
+                                                    </div> 
+                                                </ItemTemplate>
+                                            </asp:Repeater> 
+                                        </div>
+                                            
+                                        <div class="form-horizontal ">
+                                            <div class="form-group">
+                                                <h2>憋不住了！我要评论</h2> 
                                             </div>
 
                                             <div class="form-group">
-                                                <label class="col-sm-2 control-label padding_lr_0">评论人</label>
-                                                <div class="col-sm-10">
-                                                    <asp:TextBox ID="PingJiaUser" runat="server" CssClass="form-control1" Width="460" placeholder="请填写姓名" required></asp:TextBox>
+                                                <p>给自己起个名字</p>
+                                                <div class="write_namebox ">
+                                                    <asp:TextBox ID="PingJiaUser" runat="server" CssClass="write_name required" placeholder="请填写姓名" required></asp:TextBox>
                                                 </div>
                                             </div>
-                                            <div class="form-group">
-                                                <label class="col-sm-2 control-label padding_lr_0">评论内容</label>
-                                                <div class="col-sm-10">
-                                                    <asp:TextBox ID="PingJiaContent" runat="server" CssClass="form-control1" Width="460" TextMode="MultiLine" Rows="4" placeholder="请填写内容"
+                                            <div class="form-group"> 
+                                                <div class="write_textbox">
+                                                    <asp:TextBox ID="PingJiaContent" runat="server" CssClass="write_text required" TextMode="MultiLine" Rows="4" Maxlength="500" placeholder="我想说些什么"
                                                         required></asp:TextBox>
                                                 </div>
                                             </div>
-                                            <div class="form-group">
-                                                <label class="col-sm-2 control-label padding_lr_0">评论星级</label>
-                                                <div class="col-sm-10">
-                                                    <asp:DropDownList ID="Xing" runat="server" CssClass="form-control1 orange" Width="260">
-                                                        <asp:ListItem>★★★★★</asp:ListItem>
-                                                        <asp:ListItem>★★★★</asp:ListItem>
-                                                        <asp:ListItem>★★★</asp:ListItem>
-                                                        <asp:ListItem>★★</asp:ListItem>
-                                                        <asp:ListItem>★</asp:ListItem>
+                                            <div class="form-group"> 
+                                                <p class="pay_about">给资源打分：</p>
+                                                <div class="sub_box"> 
+                                                    <asp:DropDownList ID="Xing" runat="server" CssClass="pay_star pshow_star required" >
+                                                        <asp:ListItem class="pay_star">★★★★★</asp:ListItem>
+                                                        <asp:ListItem class="pay_star">★★★★</asp:ListItem>
+                                                        <asp:ListItem class="pay_star">★★★</asp:ListItem>
+                                                        <asp:ListItem class="pay_star">★★</asp:ListItem>
+                                                        <asp:ListItem class="pay_star">★</asp:ListItem>
                                                     </asp:DropDownList>
-                                                </div>
-                                            </div>
 
-                                            <div class="form-group">
-                                                <label class="col-sm-2 control-label"></label>
-                                                <div class="col-sm-10">
-                                                    <asp:Button ID="btnSave" runat="server" Text="提交信息" CssClass="btn btn-primary"  OnClick="btnSave_Click" />
+                                                    <asp:Button ID="btnSave" runat="server" Text="我写好了" CssClass="required forsubmit"  OnClick="btnSave_Click" />
+                                           
                                                 </div>
+                                                
                                             </div>
+ 
                                         </div>
                                     </div>
 

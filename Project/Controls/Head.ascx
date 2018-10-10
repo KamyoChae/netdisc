@@ -30,7 +30,7 @@
                 <%}
                     else
                     { %>
-                    <li class="navbar-brand">你好,<%=HttpContext.Current.Request.Cookies["logininfo"].Values["Manager"] %></li>
+                    <li class="navbar-brand"><%=HttpContext.Current.Request.Cookies["logininfo"].Values["Manager"] %></li>
                     <li><a class="navbar-brand" href="./SysManage/MainFrame.aspx">个人中心</a></li>
                     <li><a class="navbar-brand" href="./SysManage/Logout.aspx"><font class="red">退出</font></a></li>
 
