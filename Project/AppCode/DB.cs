@@ -129,7 +129,6 @@ namespace Project
                 SqlDataAdapter da = new SqlDataAdapter(comm);
                 DataTable table = new DataTable();
                 da.Fill(table);
-
                 DisposeConnection(conn);
                 return table;
             }

@@ -9,10 +9,12 @@
                 <head>
                     <meta charset="UTF-8">
                     <title></title>
-                    <link rel="stylesheet" type="text/css" href="style/bootstrap.css" />
+                    <link rel="stylesheet" type="text/css" href="style/bootstrap1.css" />
                     <link rel="stylesheet" type="text/css" href="style/font-awesome.min.css" />
-                    <link rel="stylesheet" type="text/css" href="style/style.css" />
+                    <link rel="stylesheet" type="text/css" href="style/style1.css" />
+                    <link rel="stylesheet" href="./style/kamstyle.css">
                     <script type="text/javascript" src="script/jquery-1.10.2.min.js"></script>
+
                     <script type="text/javascript" src="script/bootstrap.min.js"></script>
                     <script type="text/javascript" src="script/co.Core.js"></script>
                     <script type="text/javascript" src="script/system.js"></script>
@@ -21,67 +23,83 @@
 
                 <body>
                     <form id="Form1" runat="server">
-                        <uc1:Head ID="Head1" runat="server" />
+                        <uc1:Head ID="Head" runat="server" />
 
-                        <div class="main_body padding_lr_0" style="width:1150px;">
-                            <uc3:Left ID="Left1" runat="server" />
+                        <div class="index_body">
 
-                            <div class="col-md-9" style="border-left:#ccc solid 1px;">
+                            <div class="index_new">
 
-                                <div class="col-md-12 nav-tit"><i class="icon-home"></i> 最新资源</div>
-                                <asp:Repeater ID="rptList1" runat="server">
-                                    <ItemTemplate>
-                                        <div class="col-md-12 padding_top_10" style="padding:10px 0;border-bottom:#eee solid 1px;">
-                                            <a href="ProductShow.aspx?id=<%#Eval(" Id ") %>">
-                                                <div class="col-md-8">
-                                                    <%#Eval("ProductName")%>
+                                <div class="data-new">
+                                    <div class="nav-tit"> 最新资源</div>
+                                    <div class="index_listbox">
+                                        <asp:Repeater ID="rptList1" runat="server">
+                                            <ItemTemplate>
+                                                <div class="index_listbox_items">
+                                                    <a href="ProductShow.aspx?id=<%#Eval(" Id ") %>">
+                                                        <div class="productName">
+                                                            <%#Eval("ProductName")%>
+                                                        </div>
+                                                        <div class="title_item">
+                                                            <%#Eval("AddTime") %>
+                                                        </div>
+                                                        <div class="fileType">
+                                                            <%#Eval("FileType")%>
+                                                        </div>
+                                                        <div class="rename">
+                                                            <%#Eval("rename")%> <i class="icon-download-alt"></i></div>
+                                                    </a>
                                                 </div>
-                                                <div class="col-md-8">
-                                                    <%#Eval("AddTime") %>
-                                                </div>
-                                                <div class="col-md-2 text-center">
-                                                    <%#Eval("FileType")%>
-                                                </div>
-                                                <div class="col-md-2 text-center">
-                                                    <%#Eval("rename")%> <i class="icon-download-alt"></i></div>
-                                            </a>
-                                        </div>
-                                    </ItemTemplate>
-                                </asp:Repeater>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                    </div>
 
-                                <div class="col-md-12 nav-tit" style="margin-top:20px;"><i class="icon-home"></i> 热门资源</div>
-                                <asp:Repeater ID="rptList2" runat="server">
-                                    <ItemTemplate>
-                                        <div class="col-md-12 padding_top_10" style="padding:10px 0;border-bottom:#eee solid 1px;">
-                                            <a href="ProductShow.aspx?id=<%#Eval(" Id ") %>">
-                                                <div class="col-md-8">
-                                                    <%#Eval("ProductName")%>
-                                                </div>
-                                                <div class="col-md-2 text-center">
-                                                    <%#Eval("FileType")%>
-                                                </div>
-                                                <div class="col-md-2 text-center"><i class="icon-download-alt"></i> <%#Eval("hits")%> 次
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </ItemTemplate>
-                                </asp:Repeater>
+                                </div>
 
-                                <div class="col-md-12 nav-tit" style="margin-top:20px;"><i class="icon-home"></i> 用户排行</div>
-                                <asp:Repeater ID="rptList3" runat="server">
-                                    <ItemTemplate>
-                                        <div class="col-md-12 padding_top_10" style="padding:10px 0;border-bottom:#eee solid 1px;">
-                                            <div class="col-md-6"><a href="ProductList.aspx?UserName=<%#Eval("UserName") %>"><%#Eval("UserName")%></a></div>
-                                            <div class="col-md-6 text-center"><i class="icon-upload-alt"></i> 总计上传数 <%#Eval("num")%>
-                                            </div>
-                                        </div>
-                                    </ItemTemplate>
-                                </asp:Repeater>
+                                <div class="data-hot">
+                                    <div class="nav-tit"> 热门资源</div>
+                                    <div class="index_listbox">
+                                        <asp:Repeater ID="rptList2" runat="server">
+                                            <ItemTemplate>
+                                                <div class="index_listbox_items ">
+                                                    <a href="ProductShow.aspx?id=<%#Eval(" Id ") %>">
+                                                        <div class="productName">
+                                                            <%#Eval("ProductName")%>
+                                                        </div>
+                                                        <div class="fileType">
+                                                            <%#Eval("FileType")%>
+                                                        </div>
+                                                        <div class="download_nums"><i class="icon-download-alt"></i> <%#Eval("hits")%>
+                                                                次
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                    </div>
+                                </div>
 
+                                <div style="display:none"> 
+                                    <div class="nav-tit"> 用户排行</div>
+                                    <div class="index_listbox">
+                                        <asp:Repeater ID="rptList3" runat="server">
+                                            <ItemTemplate>
+                                                <div class="index_listbox_items ">
+                                                    <div class=""><a href="ProductList.aspx?UserName=<%#Eval(" UserName ") %>"><%#Eval("UserName")%></a></div>
+                                                    <div class=" text-center"><i class="icon-upload-alt"></i> 总计上传数
+                                                        <%#Eval("num")%>
+                                                    </div>
+                                                </div>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                    </div>
+                                </div>
                             </div>
 
-                            <uc2:Foot ID="Foot1" runat="server" />
+                            <uc3:Left ID="Left" runat="server" />
                         </div>
+                        <uc2:Foot ID="Foot" runat="server" />
+                        <script src="./script/kamJs.js"></script>
+
                     </form>
                 </body>
 

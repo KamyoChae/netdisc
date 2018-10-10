@@ -34,7 +34,6 @@ namespace Project
                       order by num desc";
             rptList3.DataSource = DB.getDataTable(sql);
             rptList3.DataBind();
-
            
 
 
