@@ -15,11 +15,11 @@ $('#btnBack').bind("mouseleave", function () {
 })
 
 $('.dropdown').bind('mouseenter', function () {
-    $('.dropdown-menu').slideDown()
+    $('.dropdown-menu').stop(true,true).slideDown()
 
 })
 $('.dropdown').bind('mouseleave', function () {
-    $('.dropdown-menu').slideUp()
+    $('.dropdown-menu').stop(true,true).slideUp()
 
 })
 
@@ -48,17 +48,24 @@ $(document).ready(function(){
     }
 
     // ProductShow 检测页面 滚动显示内容
-
-    console.log(url)
-    try {
-        
-    var ProductShowUrl = url.split('.')[0].split('/').reverse()
-    } catch (error) {
-        
-    }
-    console.log(ProductShowUrl[0])
-    if(ProductShowUrl[0] == 'ProductShow'){ 
+    try { 
+        var ProductShowUrl = url.split('.')[0].split('/').reverse()
+    } catch (error) { 
+    } 
+    if(ProductShowUrl[0] == 'ProductShow' || 'NewsList'){ 
         window.location.hash = "#tit"
-    }
+    } 
+    
 
-}) 
+})  
+    
+ 
+ 
+
+(function initProductShow(){  
+    var textea = document.getElementById('PingJiaContent')
+    textea.setAttribute("maxlength","140")
+}())
+  
+   
+  

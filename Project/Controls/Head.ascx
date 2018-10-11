@@ -43,8 +43,18 @@
         <div class="banner">
             <div class="headsearch">
                 
-                <div class="pull-left">
-                  
+                <div class="pull-left"> 
+                    <select id="ddlFenLei" name="ddlFenLei" class="input_text required" style='width:8em; margin-right:1em;'>
+                    <option value="">--分类--</option>
+                    <%
+                        var fl = Request.QueryString["fenleiId"];
+                    foreach (System.Data.DataRow dr in dt.Rows)
+                    {
+                    %>
+                    <option value="<%=dr[0]%>" <%=dr[0].ToString()==fl?"selected":"" %>><%=dr[1]%></option>
+                    <%} %>
+                    </select> 
+
                     <input type="text" id="txtKey" class="input_text  required" placeholder="请输入" value="<%=Request["Key"] %>">
                     <div class='setSearch rotate'> 
                         <input type="button" value="" class="search required " onclick="searchInfo()">
@@ -64,8 +74,9 @@
 
     <script type="text/javascript">
         function searchInfo() {
+
             var fl = $("#ddlFenLei").val();
             var key = $("#txtKey").val().trim(); 
-                location.href = '/ProductList.aspx?fenleiId=' + fl + '&key=' + decodeURIComponent(key);
+                location.href = '/Project/ProductList.aspx?fenleiId=' + fl + '&key=' + decodeURIComponent(key);
         }
     </script>

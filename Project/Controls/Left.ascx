@@ -9,13 +9,13 @@
             <asp:Repeater ID="rptListNews" runat="server">
                 <ItemTemplate> 
                             <li class='info_item_li'>
-                                <a class="info_item" href="/NewsShow.aspx?id=<%#Eval("Id") %>" target="_blank"><%#Eval("Title") %> </a>
+                                <a class="info_item" href="NewsShow.aspx?id=<%#Eval("Id") %>" target="_blank"><%#Eval("Title") %> </a>
                                 <span class='info_time'>[<%#Convert.ToDateTime(Eval("AddTime")).ToShortDateString() %>] </span>
                             </li>
                 </ItemTemplate>
             </asp:Repeater> 
         </div>
-        <a class='info_more' href="../NewsList.aspx?typeid=1" />更多></a> 
+        <a class='info_more' href="NewsList.aspx?typeid=1" />更多></a> 
     </div> 
 </div>
 

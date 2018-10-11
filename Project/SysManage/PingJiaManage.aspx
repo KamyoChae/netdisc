@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../style/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="../style/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="../style/style.css" />
+    <link rel="stylesheet" href="../style/kamstyle1.css">
     <script type="text/javascript" src="../script/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="../script/bootstrap.min.js"></script>
     <script type="text/javascript" src="../script/system.js"></script>
@@ -20,12 +21,13 @@
 <form runat="server" id="form1">
         <div class="main_body padding_lr_0">
             <div class="col-md-12 role_content_right">
-                <div class="main_head">
-                    <div class="pull-left padding_right_15">
-                        <div class="title_box"><b>评论信息</b></div>
-                    </div>
-                    <div class="pull-left padding_left_15 ">
-                        <asp:TextBox ID="txtKey" runat="server" CssClass="input_text" placeholder="查找评论人"></asp:TextBox><asp:Button ID="btnSearch" runat="server" CssClass="search" OnClick="btnSearch_Click" Text="" />
+                <div class="main_head"> 
+                    <div class="pull-left  ">
+                         
+                        <asp:TextBox ID="txtKey" runat="server" CssClass="input_text required shadow" placeholder="查找评论人"></asp:TextBox>
+                        <div class="setSearch rotate"> 
+                                <asp:Button ID="btnSearch" runat="server" CssClass="search required shadow" OnClick="btnSearch_Click" Text="" />
+                        </div>
                     </div>
                     <div class="pull-right">
                     </div>
@@ -52,12 +54,15 @@
                                     资源：<a href="../ProductShow.aspx?id=<%#Eval("InfoId") %>" target="_blank"><%#Eval("InfoName") %></a>
                                     &nbsp;&nbsp;/&nbsp;<span class="orange"><%#Eval("Xing") %></span>
                                 </div>
-                                <%#Eval("PingJiaContent")%>
+                                <div class="report_conotent">
+
+                                        <%#Eval("PingJiaContent")%>
+                                </div>
                             </td>
                             <td><%#Eval("PingJiaTime")%></td>
                             <td>
                                 <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%#Eval("Id") %>' CommandName="del"
-                                     class="btn btn-default" OnClientClick="JavaScript:return confirm('确定要删除吗？')">删除</asp:LinkButton>
+                                     class="btn btn-primary" OnClientClick="JavaScript:return confirm('确定要删除吗？')">删除</asp:LinkButton>
                             </td>
                         </tr>
                         </ItemTemplate>

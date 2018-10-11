@@ -102,11 +102,13 @@ namespace Project
             //string username = new MemberBase().mbUserName;
 
             StringBuilder strSql = new StringBuilder();
+            
             strSql.Append("insert into PingJia(");
             strSql.Append("PingJiaUser,PingJiaContent,PingJiaTime,IsAudit,InfoId,InfoName,Xing");
             strSql.Append(") values (");
             strSql.Append("'" + PingJiaUser.Text + "','" + PingJiaContent.Text + "',getdate(),1,'" + id + "','" + productname.Text.Trim() + "','" + Xing.Text.Trim() + "'");
             strSql.Append(") ");
+            
 
             DB.ExecuteSql(strSql.ToString());
 

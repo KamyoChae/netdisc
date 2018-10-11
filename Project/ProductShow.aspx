@@ -120,8 +120,8 @@
                                                 </div>
                                             </div>
                                             <div class="form-group"> 
-                                                <div class="write_textbox">
-                                                    <asp:TextBox ID="PingJiaContent" runat="server" CssClass="write_text required" TextMode="MultiLine" Rows="4" Maxlength="500" placeholder="我想说些什么"
+                                                <div class="write_textbox" >
+                                                    <asp:TextBox ID="PingJiaContent"   runat="server" CssClass="write_text required" TextMode="MultiLine"  placeholder="我想说些什么"
                                                         required></asp:TextBox>
                                                 </div>
                                             </div>

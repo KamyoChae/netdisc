@@ -8,7 +8,7 @@
     font-size: 16pt;
 }
 a{
-    text-decoration: none;
+    text-decoration: none !important;
     color: #424242;
 }
  
@@ -508,7 +508,7 @@ a{
     width: 5em;
     margin: .3em 1.2em;
 }
-.dropdown-menu li a::after{
+.dropdown-menu li a::after, .child_nav ul li::after{
     content: ""; 
     position: absolute;
     bottom: -5px;
@@ -534,8 +534,14 @@ a{
         width: 100%
     }
 }
-.dropdown-menu li a:hover::after{
-    opacity: 1;
+.child_nav ul li{ 
+    position: relative;
+}
+.child_nav ul li:hover{
+    color: #508cfc;
+}
+.dropdown-menu li a:hover::after, .child_nav ul li:hover::after{
+    opacity: 1; 
 }
 
 
@@ -604,6 +610,7 @@ a{
     border: 2px solid #508cfc;
     border-radius: 50%; 
     animation: scale1 1.2s infinite alternate-reverse ;
+    pointer-events: none;
 }
 @keyframes scale1{
     0%{ 
@@ -817,7 +824,7 @@ a{
     font-size: .8em;
     transition: all .1s;
 }
-.index_listbox_items a:hover{
+.index_listbox_items a:hover, .main_nav:hover{
     background: #c7dafc;
 }
 .index_listbox_items a div:nth-child(1){
@@ -993,6 +1000,9 @@ div.pagination{
     text-align: center; 
     border-bottom: 2px dashed #bbb;
     margin: 1em 2em 2em 2em ; 
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
  
 .pshow_type{
@@ -1184,4 +1194,195 @@ div.pagination{
 }
 .forsubmit:hover{
     background:  #37bafc ;
+}
+
+/* newsList */
+
+.repeater_box{ 
+    margin: 0 6em 4em 6em; 
+}
+.news_itembox{
+    position: relative;
+    box-sizing: border-box;
+    padding: 1em ;  
+    border-radius: 10px;
+    margin-bottom: 2em;
+    
+    box-shadow: 0 0 5px #ddd;
+}
+.news_itembox::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border: 1px solid #424242;
+    animation: heiguys 1s infinite alternate-reverse;
+}
+.news_content{
+    font-size: .9em;
+    box-sizing: border-box;
+    padding: 1em;
+}
+.news_itembox:hover{
+    box-shadow: 0 0 5px #555;
+}
+.newsbox{ 
+    width: 72%;
+    padding-bottom: 5em;
+    margin: auto;
+}
+.news_article_content{
+    text-align: left; 
+    padding: 2em 1.8em;
+}
+.news_article_content p{
+    font-size: .8em;
+    margin: .8em 0;
+}
+.news_about>span{
+    margin: 0 1em; 
+}
+
+.mainframe{ 
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%; 
+}
+.logo_main{ 
+    margin: 0;
+    color: #fff;
+}
+.logo_main img{
+    height: 4em;
+    width: 4em;
+    margin-left: 2em;
+}
+.header_bar{
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box; 
+    
+    background: #0d5ea6
+}
+.header_bar_right_ul, .header_bar_right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 2em; 
+}
+.header_bar_right_ul li{
+
+    margin: 0 1em;
+}
+.header_bar_right_ul li a{
+    font-size: .8rem;
+    font-weight: 200;
+    color: #fff;
+    text-decoration: none;
+}
+.quitout:hover{
+    transform: scale(1.1)
+}
+.body_container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.main_left{
+    width: 270px;
+    height: calc(100vh - 100px);
+    box-shadow: 0 0 10px #bbb;
+    border-radius: 10px;
+    z-index: 999;
+    overflow: hidden;
+}
+.main_left_overflow{ 
+    padding: 2em .5em;
+    font-size: .8rem;
+}
+
+.main_left_overflow .main_nav{ 
+    padding: .5em .2em;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #bbb;
+    margin: .4em;
+}
+.main_nav>span, .child_nav>ul {
+    padding: 0 .8em; 
+}
+.main_nav>span{
+    display: inline-block;
+    width: 100%;
+}
+.child_nav>ul{
+    box-sizing: border-box; 
+    padding: .5em 1.8em 1.2em 1.8em;
+}
+.main_nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+.icon_right{
+    margin-right: 1em;
+}
+.child_nav>ul li { 
+    margin: .5em 0;
+}
+.child_nav>ul li a{
+    text-decoration: none;;
+}
+
+.back_home{
+    display: block;
+    width: 100%;
+    height: 100%;
+} 
+
+/* reportbox */ 
+.pingjia_content  {  
+    box-sizing: border-box;
+    font-weight: 200;
+    line-height: 1.5em;
+    min-height: 50px;
+    border-left:  1px solid #ccc; 
+}
+ 
+
+.reportbox{ 
+    position: absolute;
+}
+.title_box{
+    margin: 2em; 
+}
+.repo_search{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #f4f4f4;
+}
+.shadow{
+    box-shadow: 0 0 20px #d4d4d4;
+}
+.main_right{
+    width: 100%; 
+}
+.conta{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.logorightbox{ 
+    text-align: right
+} 
+.topleft{
+    left: 15%;
+    right: 0;
+}
+.nodata{ 
+    text-align: center;
+    color: #f73131;
 }

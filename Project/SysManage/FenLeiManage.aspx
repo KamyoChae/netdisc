@@ -19,12 +19,12 @@
 <form runat="server" id="form1">
         <div class="main_body padding_lr_0">
             <div class="col-md-12 role_content_right">
-                <div class="main_head">
-                    <div class="pull-left padding_right_15">
-                        <div class="title_box"><b>资源分类信息</b></div>
-                    </div>
+                <div class="main_head"> 
                     <div class="pull-left padding_left_15 ">
-                        <asp:TextBox ID="txtKey" runat="server" CssClass="input_text" placeholder="查找名称"></asp:TextBox><asp:Button ID="btnSearch" runat="server" CssClass="search" OnClick="btnSearch_Click" Text="" />
+                            <asp:TextBox ID="txtKey" runat="server" CssClass="input_text required shadow" placeholder="查找名称"></asp:TextBox>
+                            <div class="setSearch rotate"> 
+                                    <asp:Button ID="btnSearch" runat="server" CssClass="search required shadow" OnClick="btnSearch_Click" Text="" />
+                            </div>
                     </div>
                     <div class="pull-right">
                         <span class="btn btn-primary" onclick="location = 'FenLeiOper.aspx';">新增</span>

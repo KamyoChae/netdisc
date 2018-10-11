@@ -27,7 +27,7 @@
 
                         <div class="product_box"> 
                             <div class="">
-                                <div class="nav-tit">资源列表</div>
+                                <div class="nav-tit" id="tit">资源列表</div>
                                     <div class="index_listbox">
                                         <asp:Repeater ID="rptList" runat="server">
                                                 <ItemTemplate>
@@ -46,7 +46,11 @@
                                                     </div>
                                                 </ItemTemplate>
                                             </asp:Repeater>
-                                            <asp:Literal ID="ltlNull" runat="server"></asp:Literal>
+
+                                            <div class="nodata">
+
+                                                <asp:Literal ID="ltlNull" runat="server"></asp:Literal>
+                                            </div>
 
                                     </div>
                                     
