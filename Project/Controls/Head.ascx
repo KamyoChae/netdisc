@@ -30,7 +30,7 @@
                 <%}
                     else
                     { %>
-                    <li class="navbar-brand"><%=HttpContext.Current.Request.Cookies["logininfo"].Values["Manager"] %></li>
+                    <li class="navbar-brand nav-user"><%=HttpContext.Current.Request.Cookies["logininfo"].Values["Manager"] %></li>
                     <li><a class="navbar-brand" href="./SysManage/MainFrame.aspx">个人中心</a></li>
                     <li><a class="navbar-brand" href="./SysManage/Logout.aspx"><font class="red">退出</font></a></li>
 
@@ -44,7 +44,7 @@
             <div class="headsearch">
                 
                 <div class="pull-left"> 
-                    <select id="ddlFenLei" name="ddlFenLei" class="input_text required" style='width:8em; margin-right:1em;'>
+                    <select id="ddlFenLei" name="ddlFenLei" class="input_text required shadow8" style='width:8em; margin-right:1em;'>
                     <option value="">--分类--</option>
                     <%
                         var fl = Request.QueryString["fenleiId"];
@@ -55,9 +55,9 @@
                     <%} %>
                     </select> 
 
-                    <input type="text" id="txtKey" class="input_text  required" placeholder="请输入" value="<%=Request["Key"] %>">
+                    <input type="text" id="txtKey" class="input_text  required shadow8" placeholder="请输入" value="<%=Request["Key"] %>">
                     <div class='setSearch rotate'> 
-                        <input type="button" value="" class="search required " onclick="searchInfo()">
+                        <input type="button" value="" class="search required shadow8" onclick="searchInfo()">
                     </div>
                 </div>
                     

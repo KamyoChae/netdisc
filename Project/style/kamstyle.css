@@ -3,6 +3,11 @@
     padding: 0;
     list-style: none;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+}
+.myicon{
+    display: none !important; 
+    margin: 0 .5em;
 }
 :root{
     font-size: 16pt;
@@ -42,6 +47,8 @@ a{
     border: 1px solid rgba(66, 66, 66, 0.5);
     outline: none;
     border-radius: 6px;
+    
+    transition: .3s all;
 }
 .checkcode{
     width: 290px;
@@ -52,7 +59,7 @@ a{
     height: 45px;
 }
 #btnLogin{
-    border: none;
+    border: 1px solid #fff;
     width: 220px;
     transition: .4s all;
 }
@@ -68,6 +75,7 @@ a{
     height: 100vh;
     background: #dcd9d4;
     transform: skew(-50deg) translateX(30%);
+    z-index: -1;
 }
 .logo{
     display: flex;
@@ -87,8 +95,8 @@ a{
     position: absolute;
     top: 10%;
     z-index: 999;
-    right: 15%;
-    width: 600px;
+    right: 0; 
+    width: 50%; 
     height: 600px; 
 }
 .animate .textbox{
@@ -289,7 +297,7 @@ a{
 }
 .form-group label{
     display: inline-block;
-    width: 5em;
+    width: 6em;
     color: #fff;
     text-align: right;
     font-size: .8em;
@@ -398,7 +406,9 @@ a{
     padding: 10em 15em;
     border-radius: 50%;
     background: #fff;
-    transform: translate(50%, 0%);
+    transform: translate(50%, 0%); 
+    z-index: -1;
+    transition: all 1s;
 }
 .reglogobox{
     width: 40%;
@@ -432,25 +442,25 @@ a{
     font-size: 1.2em;
     font-weight: 400;
     color: #424242;
+    transition: .3s all;
 }
 .navbar-brand{
     position: relative;
-    display: inline-block;
-    width: 5em; 
+    display: inline-block; 
     font-size: 1em;
     font-weight: 200;
     color: #424242; 
     text-align: center; 
-    margin:  0 .6em;
-    padding: 20px 0; 
-    overflow: hidden;
+    margin:  0 .8em;
+    padding: 20px 0;  
     white-space: nowrap;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis; 
+    transition: .3s all;
 }
 .navbar-brand::before{
     content: "";
     position: absolute;
-    left: 0;
+    left: -1em;
     width: 0;
     height: 0;
     border: 5px solid #508cfc;
@@ -508,7 +518,7 @@ a{
     width: 5em;
     margin: .3em 1.2em;
 }
-.dropdown-menu li a::after, .child_nav ul li::after{
+.dropdown-menu li a::after, .child_nav ul li::after, .listActive::after{
     content: ""; 
     position: absolute;
     bottom: -5px;
@@ -520,6 +530,9 @@ a{
     opacity: 0;
 }
 
+.listActive::after{
+    opacity: 1 !important;
+}
 @keyframes widthslid{
     0%{
         width: 0%;
@@ -552,9 +565,10 @@ a{
     position: relative;
     box-sizing: border-box;
     width: 100%;
-    height: 400px;
-
+    height: 300px; 
     background: #0d5ea6 ;
+    z-index: 1;
+    overflow: hidden;
 }
 .introduce{
     box-sizing: border-box;
@@ -563,12 +577,17 @@ a{
     width: 50%;
     height: 100%; 
     overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+    transition: all .3s;
 }
 
 .logoimg{
     position: absolute;
     right: 6em;
     width: 60%; 
+    
+    transition: .3s all;
 }
 .logoimg img{
     width: 100%;
@@ -578,18 +597,18 @@ a{
 .headsearch{
     position: absolute;
     top: 5em;
-    left: 8em;
-    width: 40%;
-    height: 8em; 
+    left: 8em; 
+    transition: .3s all;
 }
 .pull-left{
     display: flex;
     justify-content: center;
+    
 }
 .input_text{
     border: none;
-    margin: 0;
-}
+    margin: 0; 
+} 
 .setSearch{ 
     position: relative;
     width: 45px;
@@ -648,7 +667,7 @@ a{
     height: 400px;
     padding: 3em 6em;
     background: #1f3957;
-
+    transition: .3s all;
 }
 .flexbox{
     display: flex;
@@ -787,6 +806,7 @@ a{
     text-align: center;
     background:linear-gradient( 100deg, #f73131 , #f7315c );
     margin: 2em 0 4em 0;
+    transition: .3s all;
 }
 .nav-tit::before, .nav-tit::after{
     content: '';
@@ -923,6 +943,8 @@ a{
     justify-content: center;
     flex-wrap: wrap;
     padding: 0 25%;   
+    
+    transition: all .3s
 } 
 
 .recommend_list .card{
@@ -984,25 +1006,25 @@ div.pagination{
     width: 60%;
     margin: auto;  
     margin-bottom: 8em;
-    
+    transition: all .3s;
 }
 .titlebox{  
     position: relative; 
     overflow: hidden;
     text-align: center;  
-    box-shadow: 0 0 30px #ccc;
+    box-shadow: 0 0 20px #ccc;
     border-radius: 10px; 
 }
 .pshow_title{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.5rem;
-    height: 3.6em;
-    line-height: 3.6em;
+    height: 3.6em;  
     text-align: center; 
     border-bottom: 2px dashed #bbb;
-    margin: 1em 2em 2em 2em ; 
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    margin: 1em 2em 2em 2em ;  
+    transition: .3s all;
 }
  
 .pshow_type{
@@ -1200,6 +1222,7 @@ div.pagination{
 
 .repeater_box{ 
     margin: 0 6em 4em 6em; 
+    transition: all .3s;
 }
 .news_itembox{
     position: relative;
@@ -1366,6 +1389,9 @@ div.pagination{
 .shadow{
     box-shadow: 0 0 20px #d4d4d4;
 }
+.shadow8{
+    box-shadow: 0 0 20px #888;
+}
 .main_right{
     width: 100%; 
 }
@@ -1385,4 +1411,409 @@ div.pagination{
 .nodata{ 
     text-align: center;
     color: #f73131;
+}
+
+@media screen  and ( max-width: 1024px ){
+
+    /* index */
+    .headnav{
+        margin: .5em 1em;
+    }
+    .indexlogo a{
+        font-size: .8em;
+    }
+    .navbar-brand{
+        font-size: .8rem; 
+        /*width: 3em;  */
+    }
+    .dropdown-menu{
+        width: 50vw;
+    }
+    .dropdown-menu li a {
+        font-size: .8rem; 
+    }
+    .logoimg{
+        right: 2em;
+    }
+    .required{
+        width: 13rem;
+    }
+    .search{
+        width: 45px;
+    }
+    .headsearch{
+        left: 4em; 
+    }
+    .info_more{
+        width: 5em;
+        height: 5em;
+        line-height: 5em;
+    }
+    .card{
+        flex-grow: 0;
+    }
+    .abox{
+        margin-left: 1em;
+    }
+    .recommend_list{
+        padding: 0 10%;
+    }
+    /* register */
+    .regmain{
+        width: 500px;
+        margin-left: 10%;
+    }
+    .reglogo{
+        padding:10em 5em;
+    } 
+    .reglogobox h1{
+        font-size: 1.5em;
+    }
+
+    /* login */
+    .animate{
+        right: 0%;
+    }
+    .checkcode{
+        width: calc( 13rem - 110px )
+    }
+
+    /* download */
+    .pshow_title{
+        margin-top: 0;
+        margin-bottom: 0;
+    } 
+    .btn_download{
+        padding-top: 0;
+    }
+    .write_text{
+        width: 100%;
+    }
+    .pay_star, .forsubmit{
+        width: 40%;
+    }
+    .pshow_container{
+        width: 90%;
+    }
+    .pshow_type{
+       padding: 1em
+    }
+    .pshow_type span{
+        font-size: .8em;
+    }
+    /* foot */
+    .footbox{
+        padding: 3em 3em;
+    }
+    /* news */
+    .repeater_box{ 
+        margin: 0 2em 4em 2em;  
+    }
+    .news_content{
+        font-size: .8em;
+    }
+
+    /* user */
+    .logorightbox img{
+        width: 20%;
+    }
+    .topleft{
+        top: 0;
+        left: 10% ;
+    }
+    .logo_main{
+        font-size: 1.5em;
+    }
+    /*update*/
+    .main_right{
+        padding: 1em 0 0 2em;
+    }
+    /* news */
+    
+    .newsbox{
+        width: 85%;
+    }
+}
+
+@media screen and ( max-width: 800px ){
+    .introduce{
+        opacity: 0;
+    }
+    .indexlogo a span{
+        display: none;
+    }
+    .dropdown-menu{
+        width: 70vw;
+    }
+    .nav{
+        display: flex !important;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .nav-user, .icon-download-alt{
+        display: none !important;
+    } 
+    .nav-tit{
+        box-sizing: border-box;
+        width: 100%;
+        font-size: .8em;
+        letter-spacing: .5em;
+    }
+
+    .pagination li a{
+        width: 1.8em;
+        height: 1.8em;
+    }
+    [class^="data"]{
+        padding: .5em 0 2em 0;
+        box-shadow: 0 0 20px #ccc;
+        border-radius: 10px;
+        margin: 2em 1em;
+    }
+    .index_listbox_items{
+        padding: 0;
+    }
+    .recommend_list{
+        padding: 10%;
+    }
+    .card{
+        padding: .5em 1em;
+        font-size: .8rem;
+    }
+
+    .animate {
+        width: 70%;
+    }
+    .main_right{
+        padding: 0 !important;
+        box-sizing: border-box;
+    }
+    .myicon{
+        display: inline-block !important;
+    }
+
+    /* 列表动画 */
+    .main_left{
+        position: relative;   
+        background: #fff;
+        transition: all .3s;
+    }
+    .main_left_overflow{
+        padding: .5em .5em;
+    }
+    .showleft{
+        width: 100%;
+        text-align: right; 
+    }
+    .oshowleft{
+        width: 270px;
+    }
+    .noshoeleft{
+        width: 3.5em;
+        height: 2.8em;  
+        margin-left: -1em;
+        animation: scale 2s infinite alternate-reverse;
+    } 
+    .showleft:hover{
+        background: #eee;
+    }
+
+    /* newsbox */
+    .newsbox {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    /* .repeater_box */
+    .repeater_box{
+        margin: 0 1em 2em 1em;
+    }
+
+    /* banner */
+    .banner{
+        height: 100px;
+    }
+    .headsearch{
+        top: 1em;
+    }
+    .dropdown-menu{
+        width: 50vw;
+    }
+}
+
+@media screen and ( max-width:500px ) {  
+
+    /* index */
+    :root{
+        font-size: 16px;
+    }
+
+    .headnav .indexlogo a span{
+        display: none !important;
+    }
+    .headnav .indexlogo a img{ 
+        width:3.5rem;
+        height: 3.5rem;
+    }
+    .headnav{
+        margin: 0 ;
+    }
+    .banner{
+        box-sizing: border-box;
+
+    }
+    .headsearch{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+    } 
+    .required {
+        font-size: .8rem;
+        padding: .2rem .5rem;
+    } 
+    .shadow8{
+        box-shadow: 0 0 20px #555;
+    }
+    [class^='data']{
+        padding: 0;
+        padding-top: .5rem;
+        border-radius: 5px;
+        margin: 1rem 0;
+    }
+    .index_listbox, .info_box{
+        margin-bottom: 2em;
+    }
+    .index_listbox_items a div:nth-child(1){
+        flex: 5;
+        padding-left:.5rem;
+    }
+    .index_listbox_items a div:nth-child(2){
+        flex: 1
+    }
+    .index_listbox_items a div:nth-child(3){
+        flex: 1
+    }
+    .index_listbox_items a div:nth-child(4){
+        flex: 1;
+    }
+    .index_listbox_items a div.rename{
+        padding: 0;
+        
+        padding-right: .5rem;
+    }
+    .recommend_list{
+        padding: 5%;
+    }
+    .recommend_list .card{
+        padding: .8em 0;
+    }
+
+
+    /* newslist */
+
+    .repeater_box{
+        margin: 0;
+    }
+    .news_itembox{
+        border-radius: 5px;
+        border: 1px solid #bbb;
+    }
+    .news_itembox::before{
+        display: none;
+    }
+    .info_item_li{
+        margin-left: 0%;
+    }
+    .news_title {
+        color: #000;
+    }
+
+
+    /* mainFrame */
+    .logo{
+        font-size: 1.5rem;
+        margin: 1em;
+    }
+    .header_bar{
+        justify-content: space-between
+    }
+    .header_bar_right_ul, .header_bar_right{
+        padding: 0; 
+        font-size: 0;
+    }
+    .logo_main img{
+        margin-left: 0
+    } 
+    .header_bar_right{
+        display: inline
+    }
+
+    /* login */
+    .login_content{
+        padding: 0;
+    }
+    .login_form{
+        width: 100%; 
+    }
+    .login_content{
+        margin-left: 0;
+    }
+    .login_right input{
+        width: 100%;
+    }
+    .login_right{
+        margin: auto;
+    }
+    .login_right table{
+        width: 100%;
+    }
+    .login_right table  td{
+        text-align: center;
+    }
+    .login_input1  {
+        text-align: center;
+        color: #fff;
+        
+    } 
+    #btnLogin{
+        width: 80%; 
+        border: none;
+        background: linear-gradient( 100deg, #508cfc , #37bafc )
+    }
+    #btnLogin:active{
+        background: #0d5ea6
+    }
+    .login_right{
+        width: 80%
+    }
+    .center{
+        text-align: center;
+    }
+    .red{
+        color: #f73131;
+    }
+    .animate{
+        width: 100%;
+        pointer-events: none
+    }
+    .textbox{
+        display: none;
+    }
+    .eyebox{
+        width: 100%;
+        height: 0;
+        z-index: -1;
+    }
+    .eyes {
+        width: 5rem !important;
+        height: 5rem !important;
+    }
+    .ebox {
+        width: 100%;
+        height: 100%;
+    }
 }

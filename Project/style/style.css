@@ -22,6 +22,7 @@ ul, ul li {
     box-sizing: border-box;
 }
 
+
 a:link {
     text-decoration: none;
     color: #4a96d2;
@@ -62,7 +63,6 @@ a:active {
 }
 .header_bar_left .logo{font-size: 30px;}
 .logo img{height: 100px;}
-.logo a {color:#fff;background:#;padding:2px 10px;}
 .header_bar_right{
     float: right;
     padding-top:0px;
@@ -584,9 +584,7 @@ input,textarea:focus {
 .treeview .node_content .node_txt,.node_content .node_job,.node_content .node_phone,.node_content  .node_email{
     overflow: hidden;text-overflow: ellipsis;white-space: nowrap;cursor: pointer;text-align: left;
 }
-.treeview .node_content .node_txt{
-    display:inline-block;top:-10px;position:relative;width: %;height: 18px;
-}
+
 .node_content .node_job{
     color: #a0a0a0;float: right;margin:8px 0 0 0;display: block;width: 15%;
 }
@@ -765,6 +763,7 @@ input.error, select.error { border: 1px solid red;}
     border: 2px solid #508cfc;
     border-radius: 50%; 
     animation: scale1 1.2s infinite alternate-reverse ;
+    pointer-events: none;
 }
 @keyframes scale1{
     0%{ 
@@ -777,3 +776,31 @@ input.error, select.error { border: 1px solid red;}
 .shadow{
     box-shadow: 0 0 20px #d4d4d4;
 }
+
+
+ 
+
+.control-label{
+    color: #888;
+    font-weight: 200;
+    padding-top: 0 !important;
+}
+.report_conotent{
+    padding: 0 1em; 
+    font-weight: 400;
+}
+.aspNetHidden{
+    width: 100%;
+} 
+.table_span td span{
+    margin: 5px;
+}  
+@media screen  and ( max-width: 1024px ){ 
+
+    /*input_text*/
+
+    .input_text{
+        width: 100% ; 
+    }
+}
+ 

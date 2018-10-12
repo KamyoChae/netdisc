@@ -3,11 +3,10 @@
     <html class="login_html">
 
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximun-scale=1.0,user-scalable=0">
         <title></title>
-        <link rel="stylesheet" type="text/css" href="../style/bootstrap.css" />
-        <link rel="stylesheet" type="text/css" href="../style/font-awesome1.min.css" />
-        <link rel="stylesheet" type="text/css" href="../style/style1.css" />
+        <link rel="stylesheet" type="text/css" href="../style/bootstrap.css" /> 
         <link rel="stylesheet" href="../style/kamstyle.css">
         <script type="text/javascript" src="../script/jquery-1.10.2.min.js"></script>
         <script type="text/javascript" src="../script/bootstrap.min.js"></script>

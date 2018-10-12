@@ -59,13 +59,46 @@ $(document).ready(function(){
 
 })  
     
- 
+$('.child_nav ul li').bind('click',function(e){
+
+    if(!$(this).hasClass('listActive')){
+        $('.child_nav ul li').removeClass('listActive')
+        $(this).addClass('listActive')
+    }
+  
+});
  
 
 (function initProductShow(){  
+    try { 
     var textea = document.getElementById('PingJiaContent')
     textea.setAttribute("maxlength","140")
+    } catch (error) {
+        
+    }
 }())
   
    
-  
+$('.showleft').bind('click',function(){
+    /** 个人中心列表动画 */
+    console.log(111)
+    if($('.showleft i').hasClass('icon-chevron-right') ){
+
+        $('.showleft i').removeClass('icon-chevron-right')
+        $('.showleft i').addClass('icon-chevron-left')
+
+        // 展开列表
+        
+        $('.main_left').removeClass('noshoeleft')
+        $('.main_left').addClass('oshoeleft')
+    }else{
+        $('.showleft i').removeClass('icon-chevron-left')
+        $('.showleft i').addClass('icon-chevron-right')
+
+        // 收起列表 
+        $('.main_left').removeClass('oshoeleft')
+        $('.main_left').addClass('noshoeleft')
+    }
+
+})
+ 

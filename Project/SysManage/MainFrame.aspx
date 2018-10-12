@@ -4,11 +4,12 @@
 
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximun-scale=1.0,user-scalable=0">
         <title></title>
         <link rel="stylesheet" type="text/css" href="../style/bootstrap.css" />
         <link rel="stylesheet" type="text/css" href="../style/font-awesome.min.css" />
-        <link rel="stylesheet" type="text/css" href="../style/style1.css" />
         <link rel="stylesheet" href="../style/kamstyle.css">
+        <link rel="stylesheet" type="text/css" href="../style/app.css" />
         <script type="text/javascript" src="../script/jquery-1.10.2.min.js"></script>
         <script type="text/javascript" src="../script/bootstrap.min.js"></script>
         <script type="text/javascript" src="../script/system.js"></script>
@@ -25,6 +26,7 @@
                     <div class="logo logo_main"><img src="../images/logo2.png" /> 速校资源共享平台</div>
                 </div>
                 <div class="header_bar_right">
+                     
                     <ul class="header_bar_right_ul">
                         <li class="member">
                             <a >
@@ -42,14 +44,16 @@
                             <a href="Logout.aspx">注销</a> 
                         </li>
                     </ul>
+                    
                 </div>
             </div>
 
 
             <div class="body_container">
                 <!--左侧-->
-                <div class="main_left">
+                <div class="main_left  ">
                         <div class="main_left_overflow">
+                            <div class="showleft "><i class="myicon icon-chevron-right"></i></div>
                             <div class="main_nav">
                                 <span class=""><a class="back_home" href="../WebForm1.aspx">返回主页</a></span>
                             </div>
@@ -157,6 +161,7 @@
                 changeFrameHeight();
             }
         </script>
+        <script src="../script/kamJs.js"></script>
     </body>
 
     </html>

@@ -29,15 +29,7 @@ $(function () {
         var id = $(this).attr("data-id");
         $(".child_toggle" + id).toggle();
     });
-
-    //用户管理添加多角色
-    //$(".add_user_li").on("click", ".add_user", function () {
-    //    $(this).parent().after("<div class='minus_user_li'><div class='col-sm-2 padding_top_10'></div><div class='col-sm-9 padding_top_10'><select class='form-control'><option>系统管理员</option><option>资源经理</option></select></div> <div class='col-sm-1 padding_lr_0'><i class='glyphicon glyphicon-minus minus_user'></i></div></div>")
-    //});
-    //$(".add_user_li").on("click", ".minus_user", function () {
-    //    $(this).parent().parent().remove();
-    //});
-
+ 
 
     //栏目多级隐藏
     $(".role_toggle").click(function (ev) {

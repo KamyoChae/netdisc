@@ -8,17 +8,14 @@
 
                 <head>
                     <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximun-scale=1.0,user-scalable=0">
                     <title></title>
-                    <link rel="stylesheet" type="text/css" href="style/bootstrap1.css" />
                     <link rel="stylesheet" type="text/css" href="style/font-awesome.min.css" />
-                    <link rel="stylesheet" type="text/css" href="style/style1.css" />
                     <link rel="stylesheet" href="./style/kamstyle.css">
                     <script type="text/javascript" src="script/jquery-1.10.2.min.js"></script>
-
                     <script type="text/javascript" src="script/bootstrap.min.js"></script>
                     <script type="text/javascript" src="script/co.Core.js"></script>
-                    <script type="text/javascript" src="script/system.js"></script>
-                    <script type="text/javascript" src="layer/layer.js"></script>
+                    <script type="text/javascript" src="script/system.js"></script> 
                 </head>
 
                 <body>
@@ -30,6 +27,7 @@
                             <div class="index_new">
 
                                 <div class="data-new">
+                                    
                                     <div class="nav-tit"> 最新资源</div>
                                     <div class="index_listbox">
                                         <asp:Repeater ID="rptList1" runat="server">

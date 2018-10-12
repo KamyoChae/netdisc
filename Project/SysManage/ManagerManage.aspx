@@ -19,7 +19,7 @@
 <body>
 <form runat="server" id="form1">
         <div class="main_body padding_lr_0">
-            <div class="col-md-12 role_content_right">
+            <div class=" role_content_right">
                 <div class="main_head"> 
                     <div class="pull-left padding_left_15 ">
                             <asp:TextBox ID="txtKey" runat="server" CssClass="input_text required shadow" placeholder="查找用户"></asp:TextBox>
@@ -32,7 +32,7 @@
                     </div>
                     <div class="clearfix"></div>
                 </div>
-                <table class="table table_span table-hover">
+                <table class="table table-bordered table-hover">
                     <thead>
                         <tr>
                             <th>登录帐号</th>
@@ -55,9 +55,9 @@
                             <td><%#Eval("Tel")%></td>
                             <td><%#Eval("RegTime")%></td>
                             <td class="text-right">
-                                <a href="ManagerOper.aspx?id=<%#Eval("Id") %>"><span class="btn btn-primary">编辑</span></a>&nbsp;
+                                <a href="ManagerOper.aspx?id=<%#Eval("Id") %>"><span class="btn btn-primary">编辑</span></a>
                                 <asp:LinkButton ID="LinkButton1" runat="server" CommandArgument='<%#Eval("Id") %>' CommandName="del"
-                                     class="btn btn-default" OnClientClick="JavaScript:return confirm('确定要删除吗？')">删除</asp:LinkButton>
+                                     class="" OnClientClick="JavaScript:return confirm('确定要删除吗？')"><span class="btn btn-default">删除</span> </asp:LinkButton>
                             </td>
                         </tr>
                         </ItemTemplate>

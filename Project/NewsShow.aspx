@@ -25,8 +25,7 @@
                         <uc1:Head ID="Head1" runat="server" />
 
                         <div class="">
-
-
+ 
                             <div class="">
 
                                 <div class=" nav-tit" id="tit">信息详情</div>
@@ -50,8 +49,7 @@
                                     </div>
 
                                 </div>
-                            </div>
-                            <uc3:Left ID="Left1" runat="server" />
+                            </div> 
                         </div>
                     </form>
 

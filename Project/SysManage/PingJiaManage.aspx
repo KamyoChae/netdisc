@@ -33,7 +33,7 @@
                     </div>
                     <div class="clearfix"></div>
                 </div>
-                <table class="table table_span table-hover">
+                <table class="table table_span table-hover table-bordered">
                     <thead>
                         <tr>
                             <%--<th class="text-center" width="60">序号</th>--%>
