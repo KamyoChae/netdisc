@@ -16,6 +16,7 @@
     } 
     .main_right{
         width: 100vw;
+        background: red
     }
     .main_right{
         height: 100vh;
@@ -27,9 +28,25 @@
         width: 100vw !important;
     }
     .noshoeleft{
-        width: 3.5em;
+        width: 100vw;
         height: 100vh;  
-        margin-left: -1em;
+        margin-left: -100vw;
         animation: none;
     } 
+
+    /* list */
+    .main_nav{
+        font-size: 1.2rem;
+        padding: .5rem 1rem ;
+    }
+    .child_nav{
+        font-size: 1.1rem; 
+    }
+    .child_nav>ul li{
+        margin: .5em;
+        letter-spacing: .4em;
+    }
+    .listActive{
+
+    }
 }

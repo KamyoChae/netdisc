@@ -1,0 +1,13 @@
+WebForm1 	主页
+ManagerManage 	用户管理
+FenLeiOper	新增分类
+FenLeiManage	分类管理
+ProductOper	上传文件
+ProductManage	资源审核管理
+GuanZhuList	我的下载
+ProductList	下载文件
+NewsOper	发布信息
+NewsManage	信息查询
+PingJiaManage	资源评价管理
+EditInfo	个人信息
+EditPwd		修改密码

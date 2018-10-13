@@ -97,7 +97,7 @@
                                                                 <li><a href="GuanZhuList.aspx" target="myiframe">我的下载</a></li>
                                                                 <li><a href="../ProductList.aspx" target="_top">下载文件</a></li>
                                                                 <%} %>
-                                                                    <!-- <li><a href="TongJi.aspx" target="myiframe">排名统计管理</a></li> -->
+                                                              
                                         </ul>
                                     </div>
         
@@ -144,24 +144,15 @@
         
                     <!--右侧-->
                 <div class="main_right">
-                    <iframe class="" id="myiframe" name="myiframe" width="100%" height="100%" src="right.html" scrolling="auto" onload="changeFrameHeight()"
-                        frameborder="0" seamless></iframe>
+                    <iframe class="myiframe" id="myiframe" name="myiframe" width="100%" height="100%" src="right.html" scrolling="auto"  frameborder="0" seamless></iframe>
                 </div>
 
             </div>
             
 
-        </div>
-        <script type="text/javascript">
-            function changeFrameHeight() {
-                var ifm = document.getElementById("myiframe");
-                ifm.height = document.documentElement.clientHeight - 120;
-            }
-            window.onresize = function () {
-                changeFrameHeight();
-            }
-        </script>
+        </div> 
         <script src="../script/kamJs.js"></script>
+        <script src="../script/app.js"></script>
     </body>
 
     </html>

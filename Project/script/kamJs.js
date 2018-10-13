@@ -80,8 +80,7 @@ $('.child_nav ul li').bind('click',function(e){
   
    
 $('.showleft').bind('click',function(){
-    /** 个人中心列表动画 */
-    console.log(111)
+    /** 个人中心列表动画 */ 
     if($('.showleft i').hasClass('icon-chevron-right') ){
 
         $('.showleft i').removeClass('icon-chevron-right')
