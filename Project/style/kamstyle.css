@@ -1010,7 +1010,6 @@ div.pagination{
 }
 .titlebox{  
     position: relative; 
-    overflow: hidden;
     text-align: center;  
     box-shadow: 0 0 20px #ccc;
     border-radius: 10px; 
@@ -1418,6 +1417,9 @@ div.pagination{
     color: #f73131;
 }
 
+.news_item{ 
+    word-break: break-all
+}
 @media screen  and ( max-width: 1024px ){
 
     /* index */
@@ -1538,6 +1540,24 @@ div.pagination{
     .newsbox{
         width: 85%;
     }
+    .index_listbox, .info_box{
+        margin-bottom: 2em;
+    }
+    .info_box{
+        flex-direction: column;
+        padding: 0 1em;
+    }
+    .info_more{
+        width: 40%;
+        height: 2em;
+        line-height: 2em;
+        margin: 2em auto;
+
+    }
+    .info_list{
+        width: 100%;
+    }
+
 }
 
 @media screen and ( max-width: 800px ){
@@ -1644,6 +1664,17 @@ div.pagination{
     .dropdown-menu{
         width: 50vw;
     }
+
+    /*pshow_container*/
+    .pshow_container{
+        width: 100%
+    }
+    .aboutbox{
+        text-indent: 2em;
+    }
+    .btn_download{
+        overflow: hidden
+    }
 }
 
 @media screen and ( max-width:500px ) {  
@@ -1711,6 +1742,20 @@ div.pagination{
     .index_listbox, .info_box{
         margin-bottom: 2em;
     }
+    .info_box{
+        flex-direction: column;
+        padding: 0 1em;
+    }
+    .info_more{
+        width: 40%;
+        height: 2em;
+        line-height: 2em;
+        margin: 2em auto;
+
+    }
+    .info_list{
+        width: 100%;
+    }
     .index_listbox_items a div:nth-child(1){
         flex: 5;
         padding-left:.5rem;
@@ -1732,11 +1777,31 @@ div.pagination{
     .recommend_list{
         padding: 5%;
     }
-    .recommend_list .card{
-        padding: .8em 0;
+    .recommend_list .card, .text-left{
+        padding: .8em .5em;
+        width: 6em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin: .8em;
+        text-align: left;
+    }
+    .text-left{
+        margin: 0;
+        padding: 0;
     }
 
-
+    .nav-tit{
+        margin: 1em 0;
+    }
+    .news_about{
+        margin: 1em 0;
+        font-size: .8rem;
+        color: #888;
+    }
+    .news_article_content{
+        padding: 0 .8em;
+    }
     /* newslist */
 
     .repeater_box{
@@ -1754,8 +1819,33 @@ div.pagination{
     }
     .news_title {
         color: #000;
+        word-break: break-all;
+    }
+    .news_content{
+        height: 5em;
+        overflow : hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+    .news_itembox{
+        padding: .5em;
+        padding-bottom: 1.5em;
+        margin: 2%;
+        word-break: break-all;
     }
 
+    /* article */
+    .newsbox{
+        width: 100%;
+        padding-bottom: 0
+    }
+    .pshow_title{
+        font-size: 1rem;
+        margin: 0;
+        
+    }
 
     /* mainFrame */
     .logo{
@@ -1840,4 +1930,62 @@ div.pagination{
         width: 100%;
         height: 100%;
     }
+
+    /* foot */
+    .footbox{
+        padding: 0 1em;
+        height: 5em;
+    }
+    .footleft{
+        display: none;
+    }
+    .footright{
+        display: none;
+    }
+
+    /* rigister */
+
+    .regmain{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        border-radius: 0; 
+    }
+    .regmain .form-group {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        margin: 1em 0; 
+    }
+    .regmain .form-group label{
+        flex-grow: 1; 
+    }
+    .regmain .form-group div{
+        box-sizing: border-box;
+        flex-grow: 4
+    }
+    .regmain .form-group div .required{ 
+        box-sizing: border-box;
+        width: 90%
+    }
+    .form-control{ 
+        animation:none
+    }
+    .form-group label{
+        width: 2em;
+        color: #424242;
+    }
+    .regmain{
+        padding: 0;
+        background: #dcd9d4
+    }
+    .inputslide{
+        text-align: center;
+    }
+
 }

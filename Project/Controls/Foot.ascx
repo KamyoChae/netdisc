@@ -24,15 +24,14 @@
                                 <h4>相关链接:</h4>
 
                                 <div class="abox">
-                                        <a href="#">桂林航天</a>
-                                        <a href="#">桂林航天工业学院</a>
-                                        <a href="#">桂林天</a> 
-                                        <a href="#">桂林天</a>
-                                        <a href="#">桂林航天图书馆</a>
+                                        <a href="https://www.imooc.com/">慕课网</a> 
+                                        <a href="http://www.nlc.cn/">中国国家数字图书馆</a> 
+                                        <a href="https://github.com/">github</a>
+                                        <a href="https://juejin.im/">掘金</a>
                                 </div>
                         </div>
                 
                 </div>
         </div>
-        <div class="footbottom">招生咨询电话(Tel)：0773-2253028（兼传真）、2289277，[桂ICP备05001199号] 前置审核编号：桂JS201408-004桂公网安备45030502000159号</div>
+        <div class="footbottom">版权所有：桂林航天工业学院计算机科学与工程学院 电话：0773-2253021 电子邮件：jsjx@guat.edu.cn 邮编：541004</div>
 </div>

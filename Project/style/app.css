@@ -6,6 +6,16 @@
         height: 100vh;
         box-sizing: border-box;
     } 
+    .main_head{
+        text-align: center;
+        margin-bottom: 1em;
+    } 
+    .pull-right{
+        float: none !important;
+    }
+    .main_head .pull-right{
+        padding: 0 0 1em 0
+    }
     .header_bar{
         display: none;
     }
@@ -19,7 +29,9 @@
         width: 100vw; 
         min-height: 100vh;
     }
-
+    .personal-form{
+        height: 100vh !important
+    }
     #myiframe{
         height: 100vh;
     } 

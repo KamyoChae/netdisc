@@ -59,13 +59,21 @@ $(document).ready(function () {
 
 })
 
-$('.child_nav ul li').bind('click', function (e) {
-
+$('.child_nav ul li').on('click', function (e) {
+    console.log(this)
+    var oLi = this
     if (!$(this).hasClass('listActive')) {
         $('.child_nav ul li').removeClass('listActive')
-        $(this).addClass('listActive')
-
+        $(this).addClass('listActive') 
         $('.showleft').trigger('click')
+    }else{
+        if(oLi == this){
+            $('.showleft').trigger('click')
+        }else{
+ 
+            $('.showleft').trigger('click')
+            $('.showleft').trigger('click')
+        }
     }
 
 });
@@ -79,27 +87,29 @@ $('.child_nav ul li').bind('click', function (e) {
 
     }
 }())
+function showlistFn(){
 
+    $('.main_left').removeClass('noshoeleft')
+    $('.main_left').addClass('oshoeleft')
+}
+function hidelistFn(){
 
+    $('.main_left').removeClass('oshoeleft')
+    $('.main_left').addClass('noshoeleft')
+}
+var showFlag = true
 $('.showleft').bind('click', function () {
-    /** 个人中心列表动画 */
-    if ($('.showleft i').hasClass('icon-chevron-right')) {
-
-        $('.showleft i').removeClass('icon-chevron-right')
-        $('.showleft i').addClass('icon-chevron-left')
+    /** 个人中心列表动画 */ 
+    if (showFlag) {
+        showFlag = false 
 
         // 收起列表 
-        $('.main_left').removeClass('oshoeleft')
-        $('.main_left').addClass('noshoeleft')
-
+        hidelistFn()
     } else {
-        $('.showleft i').removeClass('icon-chevron-left')
-        $('.showleft i').addClass('icon-chevron-right')
+        showFlag = true 
  
         // 展开列表
-
-        $('.main_left').removeClass('noshoeleft')
-        $('.main_left').addClass('oshoeleft')
-    }
-
+        showlistFn()
+    } 
 })
+

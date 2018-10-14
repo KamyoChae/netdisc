@@ -9,7 +9,7 @@
                 <head>
                     <meta charset="UTF-8">
                     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximun-scale=1.0,user-scalable=0">
-                    <title></title>
+                    <title>速校资源共享平台</title>
                     <link rel="stylesheet" type="text/css" href="style/font-awesome.min.css" />
                     <link rel="stylesheet" href="./style/kamstyle.css">
                     <script type="text/javascript" src="script/jquery-1.10.2.min.js"></script>
