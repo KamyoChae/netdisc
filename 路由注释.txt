@@ -1,13 +1,27 @@
 WebForm1 	主页
-ManagerManage 	用户管理
-FenLeiOper	新增分类
-FenLeiManage	分类管理
-ProductOper	上传文件
-ProductManage	资源审核管理
-GuanZhuList	我的下载
-ProductList	下载文件
-NewsOper	发布信息
-NewsManage	信息查询
-PingJiaManage	资源评价管理
-EditInfo	个人信息
-EditPwd		修改密码
+ManagerManage 	用户管理 1
+FenLeiOper	新增分类 1
+FenLeiManage	分类管理 1
+ProductOper	上传文件  1
+ProductManage	资源审核管理/我的共享 1
+GuanZhuList	我的下载 1
+ProductList	下载文件 * 不用
+NewsOper	发布信息 1
+NewsManage	信息查询 1
+PingJiaManage	资源评价管理 1
+EditInfo	个人信息 1
+EditPwd		修改密码 1
+
+
+所有表格拉满屏幕 personal-form
+
+触发触摸事件 子页面引入app.css iframe.js
+
+	<link rel="stylesheet" href="../style/app.css">
+
+	<script src="../script/iframe.js"></script>
+
+移动端bug：
+
+点击列表菜单父项 会切换
+重复点击菜单子项 没有效果

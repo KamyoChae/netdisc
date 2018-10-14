@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../style/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="../style/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="../style/style.css" />
+    <link rel="stylesheet" href="../style/app.css">
     <script type="text/javascript" src="../script/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="../script/bootstrap.min.js"></script>
     <script type="text/javascript" src="../script/system.js"></script>
@@ -17,7 +18,7 @@
 </head>
 <body>
     <div class="main_right_content">
-        <div class="main_body">
+        <div class="main_body personal-form">
 
             <form runat="server" class="form-horizontal" id="form1" method="post">
 
@@ -38,5 +39,6 @@
             </form>
         </div>
     </div>
+    <script src="../script/iframe.js"></script>
 </body>
 </html>

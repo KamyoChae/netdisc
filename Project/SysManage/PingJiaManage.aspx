@@ -7,7 +7,8 @@
     <link rel="stylesheet" type="text/css" href="../style/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="../style/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="../style/style.css" />
-    <link rel="stylesheet" href="../style/kamstyle1.css">
+    <link rel="stylesheet" href="../style/app.css">
+
     <script type="text/javascript" src="../script/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="../script/bootstrap.min.js"></script>
     <script type="text/javascript" src="../script/system.js"></script>
@@ -86,5 +87,6 @@
             </div>
         </div>
 </form>
+<script src="../script/iframe.js"></script>
 </body>
 </html>

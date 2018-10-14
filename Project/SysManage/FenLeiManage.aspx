@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../style/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="../style/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="../style/style.css" />
+    <link rel="stylesheet" href="../style/app.css">
     <script type="text/javascript" src="../script/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="../script/bootstrap.min.js"></script>
     <script type="text/javascript" src="../script/system.js"></script>
@@ -17,8 +18,8 @@
 </head>
 <body>
 <form runat="server" id="form1">
-        <div class="main_body padding_lr_0">
-            <div class="col-md-12 role_content_right">
+        <div class="main_body padding_lr_0 personal-form nopadding">
+            <div class="col-md-12 role_content_right ">
                 <div class="main_head"> 
                     <div class="pull-left padding_left_15 ">
                             <asp:TextBox ID="txtKey" runat="server" CssClass="input_text required shadow" placeholder="查找名称"></asp:TextBox>
@@ -31,7 +32,7 @@
                     </div>
                     <div class="clearfix"></div>
                 </div>
-                <table class="table table-bordered table-hover">
+                <table class="table table-bordered table-hover fenleima">
                     <thead>
                         <tr>
                             <th>资源分类名称</th>
@@ -70,5 +71,6 @@
             </div>
         </div>
 </form>
+<script src="../script/iframe.js"></script>
 </body>
 </html>
