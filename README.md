@@ -1,4 +1,4 @@
-# -netdisc
+# 速校资源共享平台 
  a network disk
 # 移动端注册页面
 ![](https://github.com/KamyoChae/netdisc/blob/master/_demo_images/rigister.JPG)
