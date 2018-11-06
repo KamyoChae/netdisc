@@ -16,7 +16,7 @@
 
 # 首页
 ![](https://github.com/KamyoChae/netdisc/blob/master/_demo_images/index.gif)
-# 
+# 资源审核界面
 ![](https://github.com/KamyoChae/netdisc/blob/master/_demo_images/list.JPG)
 # 登陆界面
 ![](https://github.com/KamyoChae/netdisc/blob/master/_demo_images/login.JPG)
