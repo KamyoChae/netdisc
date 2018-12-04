@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Project
+namespace Project 
 {
     public partial class ManagerReg : System.Web.UI.Page
     {
